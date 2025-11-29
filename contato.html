@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>       
+        <nav>
+            <ul>
+                <li><a href="index.html">Sobre mim</a></li>
+                <li><a href="./formacao.html">Formacao</a></li>
+                <li><a href="./portfolio.html">Portfolio</a></li>                
+                <li><a href="#">Contato</a></li>
+                <button id="themeToggle" onclick="toggleTheme()">Tema</button>  
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contato-box">
+        <content>
+            <div class="contato">
+                <h1>Contato</h1>                
+                <h4>Formulario</h4>
+                
+                <form id="form-contato" onsubmit="validarFormulario(event)">
+                    <input id="nome" type="text" name="nome_completo"  placeholder="Digite o seu nome"/>
+                    <br><br>                                                                                    
+                    <input id="email" type="email" name="email" placeholder="Digite o seu e_mail" />
+                    <br><br>
+                    <textarea id="mensagem" rows="10" cols="40" type="comentario" placeholder="Deixe um comentario"></textarea>
+                    <br><br>
+                    <input id="enviar" type="submit" value="Enviar" />
+                    <br>
+                </form>                        
+            </div>
+        </content>
+    </main>
+    <script defer src="script.js"></script>
+</body>
+</html>

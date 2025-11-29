@@ -1,0 +1,299 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;    
+    background-color: var(--bg);
+    color: var(--text); 
+}
+/* Muda a cor tema*/
+:root {
+    --bg: #150531;
+    --text: #afadad;    
+}
+
+body.white {
+    --bg: #afadad;  
+    --text: #150531;     
+}
+
+/* Menu para todas as paginas */
+header {    
+    border-bottom: 4px solid rgba(84, 82, 82, 0.932);
+    background-color: #3d49508e;   
+    color: white;
+    text-align: center;
+    padding: 10px;    
+}
+
+nav li {
+    display: inline-block;    
+    list-style: none;
+    margin-right: 40px;
+    font-size: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: salmon;
+}
+
+li a:hover {    
+    color: white;         
+}
+
+button {
+    margin-left: 100px;
+    padding: 4px 14px 4px;
+    border: 4px solid #696c6ea0;
+    border-radius: 10%;     
+}
+
+button:hover {
+    transform: scale(1.10);
+}
+ /* Saobre mim */
+main {
+    display: flex;
+    flex-wrap: wrap;    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 21px;
+    text-align: center;
+    margin: 20px;
+    flex: 1;
+}
+
+sidebar {
+    flex: 1;      
+    gap: 20px;
+    min-height: 100%;    
+}
+
+img {    
+    width: 200px;
+    height: auto;    
+    border-radius: 10px;
+    border: 4px solid salmon;
+    box-shadow: 5px 5px 10px;
+}
+
+content {
+    flex: 3;
+    margin-left: 20px;    
+    padding-left: 20px;
+    padding: 20px;
+    min-height: 100%;
+    text-align: justify;    
+    font-size: x-large;
+    font-family: Helvetica;    
+    margin-left: 10%;
+    margin-right: 20%;   
+    border: 2px inset salmon; 
+    box-shadow: 5px 5px 10px;
+    line-height: 30px;
+}
+
+content h2 {
+    font-size: 25px;
+}
+
+content span {
+    font-style: italic;
+    font-size: 27px;
+}
+
+/* Formacao */
+.formacao-cursos {
+    padding-left: 100px;
+}
+
+.formacao h1 {
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+.formacao h5 {
+    font-size: 23px;
+    margin-left: 50px;
+}
+
+.formacao li {
+    font-size: 18px;
+    margin-left: 50px;
+}
+
+/*Contato */
+.contato-box {
+    margin-left: 80px;
+    margin-top: 20px;  
+}
+
+.contato {
+    text-align: center;    
+}
+ 
+input {
+    width: 310px;
+    height: 30px;
+}
+
+#enviar {
+    width: 70px;
+    border-radius: 5px;
+    border: 4px solid #696c6ea0;
+    font-size: 14px; 
+    font-weight:600;  
+}
+
+#enviar:hover {    
+    transform: scale(1.10);
+}
+
+/*Portfolio */
+.portfolio {
+    text-align: center;
+}
+
+.portfolio h1 {
+    font-size: 35px;    
+} 
+
+.portfolio p {
+    font-size: 20px;
+}
+
+.portfolio li {
+    list-style-type: none;
+}
+
+
+.portfolio-box {    
+    margin-left: 80px;
+    margin-top: 20px;   
+}
+
+
+#projeto {
+    color:rgb(61, 152, 183);
+    line-height: 50px;      
+}
+
+#projeto:hover {
+    color: rgb(221, 116, 104);
+}
+
+    
+/* Resposivo para celular */
+@media only screen and (max-width: 768px) {        
+    header {  
+        display: flex;
+        flex-direction: column;             
+        list-style-type: none;        
+        margin: 0;        
+        padding: 0;                      
+        border: 2px solid sandybrown;        
+    }
+
+    li a {        
+        display: block;           
+        padding: 10px 10px;
+        text-decoration: none;
+    }  
+    
+    button {
+        position: static;
+        width: 80px; 
+        margin-top: 10px;
+        margin-left: 30%;
+        margin-right: 40%;
+    }
+    
+    li a:hover {
+        background-color: #555555;
+        color: white;
+    }
+    
+    main {        
+        flex-direction: column;
+        margin-top: 20px;                
+    }content{
+        margin-left: 5px;
+        margin-top: 20px;
+        margin-right: 5px;
+        margin-bottom: 80px;
+    } 
+
+    sidebar h2 {
+        font-size: 25px;
+    } p {
+        font-size: 20px;
+    }
+    
+    .sobre-mim h2 {
+        font-size: 15px;
+    }
+
+    .sobre-mim span {
+        font-size: 18px;
+    }
+
+    .sobre-mim p {
+        font-size: 15px;
+    }
+
+    sidebar, content {
+        flex: 1;
+    }      
+    
+    .formacao-cursos, 
+    .portfolio-box {
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 0;
+    }
+
+    .formacao h1 {
+        margin-left: 0;
+        font-size: 28px;
+    }
+
+    .formacao h5 {
+        margin-left: 0;
+        font-size: 18px;
+    }
+
+    .formacao li {
+        margin-left: 0;
+        font-size: 15px;
+        line-height: 26px;
+    }
+
+    .portfolio h1 {
+        font-size: 28px;
+    }
+
+    .portfolio ul li {
+        margin-right: 30px;
+    }
+
+    .contato h1 {
+        font-size: 28px;
+    }
+
+    input {        
+        width: 260px;       
+    }
+
+    textarea {
+        width: 260px;
+        height: 90px;
+    }
+
+    .contato-box {
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 0;
+    }
+            
+}
